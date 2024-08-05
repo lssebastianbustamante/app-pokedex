@@ -40,7 +40,7 @@ Se deben seguir los siguientes paso para levantar la API
 
 ```bash
 $ 1. npm run db:create #Para creacion de la base de datos.
-$ 2. npm run migration:generate #Para realizar la migracion.
+$ 2. npm run migration:generate -- src/db/migrations/<nombre-migration> #Para realizar la migracion.
 $ 3. npm run migration:run #Para aplicar la migracion.
 $ 4. npm run seed:run #Para realizar el populate de los datos.
 $ 5. npm run start:dev
