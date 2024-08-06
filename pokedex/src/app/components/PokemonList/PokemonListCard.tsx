@@ -16,7 +16,7 @@ interface PokemonCardListProps {
 const PokemonListCard: React.FC<PokemonCardListProps> = ({ pokemon }) => {
   return (
     <Paper elevation={4}>
-      <Card sx={{ height: '100%', maxHeight: '250px' }}>
+      <Card sx={{ height: '100%', maxHeight: '250px', minWidth:'150px' }}>
         <CardMedia
           component="img"
           height="100"

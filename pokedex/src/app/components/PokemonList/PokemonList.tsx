@@ -48,11 +48,14 @@ const PokemonList: React.FC = () => {
           component="div"
           sx={{
             marginTop: "1rem",
-            height: '179px'
+            height: "179px",
+            padding: "0 1rem",
           }}
         >
           {loading ? (
-            <Grid sx={{display: 'flex' , flexDirection: 'row', justifyContent:'space-between'}}>
+            <Grid
+              sx={{ display: "flex", flexDirection: "", justifyContent: "space-between" }}
+            >
               <Skeleton variant="rectangular" width={211} height={155} />
               <Skeleton variant="rectangular" width={211} height={155} />
               <Skeleton variant="rectangular" width={211} height={155} />
@@ -60,7 +63,18 @@ const PokemonList: React.FC = () => {
               <Skeleton variant="rectangular" width={211} height={155} />
             </Grid>
           ) : (
-            <Grid container sx={{ flexWrap: "nowrap" }} spacing={3}>
+            <Grid
+              container
+              sx={{
+                flexWrap: "nowrap",
+                overflowY: "auto",
+                minWidth: "150px",
+                paddingBottom: "1rem",
+                scrollBehavior: "smooth",
+                scrollbarColor: "#888",
+              }}
+              spacing={3}
+            >
               {pokemons.map((pokemon, index) => (
                 <Grid item xs={10} sm={5} md={3} key={index}>
                   <PokemonListCard key={index} pokemon={pokemon} />
